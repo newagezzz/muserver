@@ -1,0 +1,8 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# secret info(id/pwd etc)
+secret/
+
+# dependencies
+node_modules/
+

@@ -1,0 +1,5 @@
+[2024-02-11T14:54:13.951] [INFO] access - 127.0.0.1 - - "GET / HTTP/1.1" 200 22 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"
+[2024-02-11T14:54:13.978] [INFO] access - 127.0.0.1 - - "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8088/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"
+[2024-02-11T14:54:18.909] [INFO] access - 127.0.0.1 - - "GET /hello HTTP/1.1" 200 6 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"
+[2024-02-11T14:54:23.541] [INFO] access - 127.0.0.1 - - "GET / HTTP/1.1" 304 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"
+[2024-02-11T15:03:11.117] [INFO] access - 127.0.0.1 - - "GET /hello HTTP/1.1" 304 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"

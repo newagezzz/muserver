@@ -1,0 +1,47 @@
+var log4js = require('log4js');
+log4js.configure(
+    {
+        "appenders": {
+          "ConsoleLogAppender": {
+            "type": "console"
+          },
+          "SystemLogAppender": {
+            "type": "file",
+            "filename": "./log/system.log",
+            "maxLogSize": 5000000,
+            "backups": 3
+          },
+          "HttpLogAppender": {
+            "type": "dateFile",
+            "filename": "./log/http.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 7
+          },
+          "AccessLogAppender": {
+            "type": "dateFile",
+            "filename": "./log/access.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 7
+          }
+        },
+        "categories": {
+          "default": {
+            "appenders": ["ConsoleLogAppender"],
+            "level": "all"
+          },
+          "system": {
+            "appenders": ["SystemLogAppender"],
+            "level": "info"
+          },
+          "http": {
+            "appenders": ["HttpLogAppender"],
+            "level": "info"
+          },
+          "access": {
+            "appenders": ["AccessLogAppender"],
+            "level": "info"
+          }
+        }
+      }
+);
+module.exports = log4js;
