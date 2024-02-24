@@ -55,6 +55,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
 
+
 //app.use(bodyParser.json())
 //app.use(allowCrossDomain)
 //app.use(express.urlencoded({ extended: true, limit: "10mb" }));
@@ -79,6 +80,13 @@ io.on("connection", (socket) => {
         console.log("---------------");
         io.emit("chat", msg);
     });
+
+    socket.on("draw line", (line) => {
+      console.log("draw line received!!!");
+      console.log(line);
+      console.log("---------------");
+      io.emit("draw", line);
+  });
 });
 
 // health check
@@ -124,6 +132,11 @@ app.use((req, res, next) => {
  
 // API Version
 const apiVersion = '/api/v2.1.0';
+
+app.get('/', function (req, res) {
+  console.log("/ requested!!!");
+  res.render('index.html');
+})
 
 app.get('/hello', function (req, res) {
   console.log("/hello requested!!!");
