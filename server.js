@@ -135,7 +135,7 @@ const apiVersion = '/api/v2.1.0';
 
 app.get('/', function (req, res) {
   console.log("/ requested!!!");
-  res.render('index.html');
+  res.render('/public/index.html');
 })
 
 app.get('/hello', function (req, res) {
